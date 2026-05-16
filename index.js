@@ -1,21 +1,34 @@
 const signupBtn = document.getElementById("signupBtn");
 
-signupBtn.addEventListener("click", () => {
+const nom = document.getElementById("username");
+const email = document.getElementById("email");
+const password = document.getElementById("password");
 
-    const email = document.getElementById("email").value.trim();
-    const username = document.getElementById("username").value.trim();
-    const password = document.getElementById("password").value.trim();
+signupBtn.addEventListener("click", function () {
 
-    if(email === "" || username === "" || password === ""){
-        alert("Veuillez remplir tous les champs");
+    if(email.value === ""){
+        alert("Veuillez remplir l'email");
     }
 
-    else if(password.length < 6){
-        alert("Le mot de passe doit contenir au moins 6 caractères");
+    else if(nom.value === ""){
+        alert("Veuillez remplir le username");
+    }
+
+    else if(password.value === ""){
+        alert("Veuillez remplir le mot de passe");
     }
 
     else{
-        alert("Compte créé avec succès !");
+
+        localStorage.setItem("username", nom.value);
+        localStorage.setItem("email", email.value);
+        localStorage.setItem("password", password.value);
+
+        alert(
+            "name: " + nom.value +
+            "\nemail: " + email.value +
+            "\npassword: " + password.value
+        );
     }
 
 });
