@@ -10,7 +10,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(135deg, #0f172a, #1e293b);
+    background: linear-gradient(135deg,#0f172a,#1e293b);
 }
 
 .form{
@@ -18,16 +18,15 @@ body{
     background: white;
     padding: 40px 30px;
     border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
     display: flex;
     flex-direction: column;
     gap: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
 }
 
 .form h1{
     text-align: center;
     color: #0f172a;
-    margin-bottom: 10px;
 }
 
 .form input{
@@ -70,9 +69,10 @@ body{
     color: #3b82f6;
 }
 
-@media(max-width: 400px){
+@media(max-width:400px){
+
     .form{
         width: 90%;
-        padding: 30px 20px;
     }
+
 }
